@@ -27,7 +27,6 @@
 
 		initialize: function () {
 			this.intervalId = null;
-
 			this.slideDeck = arguments[0].collection;
 			this.listenTo(this.slideDeck, 'reset', this.togglePlayback);
 			this.on('change:state', this.togglePlayback, this)
