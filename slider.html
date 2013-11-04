@@ -1,0 +1,42 @@
+<div id="slideshow" class="module captionsOn">
+    <div class="container">
+        <div class="header">
+            <h2 class="title">My Portfolio. Listed Chronologically.</h2>
+        </div>
+
+        <div class="content">
+            <div style="width:10000px; float:left;" class="slides">
+                
+                <script id="slide-template" type="text/template">
+                    <img src="<%= image.url %>" width="<%= image.width %>" height="<%= image.height %>" alt="<%= image.alt %>" />
+                </script>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="navigation">
+                <div class="command cmdPrevious">&lsaquo;</div>
+                <div class="command cmdNext">&rsaquo;</div>
+            </div>
+            <div class="controls">
+                <div class="command cmdPlay" title="play">&#8227;</div>
+                <div class="command cmdHelp">?</div>
+                <div class="command cmdToggleCaptions">Hide Captions</div>
+            </div>
+            <div class="menu"></div>
+            <div class="feedback"></div>
+            <div class="frame"></div>
+        </div>
+    </div>
+
+    <script id="console-template" type="text/template">
+        <div class="caption client">Client</div>
+        <h5><%= client %></h5>
+        <div class="caption project">SkillSet</div>
+        <p><%= skills %></p>
+        <a href="<%= fragment %>" class="cmdReadMore" ></a>
+        <a target="_blank" href="<%= url %>" class="cmdLaunchSite"><%= client %></a>
+    </script>
+
+</div>
