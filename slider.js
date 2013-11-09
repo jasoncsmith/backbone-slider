@@ -154,19 +154,16 @@
 			'click .cmdToggleCaptions': 'toggleCaptions'			
 		},
 
-		initialize: function () {
+		initialize: function (args) {
 
 			this.$menu = this.$('.menu');
 			this.$slides = this.$('.slides');
 			this.$feedback = this.$('.feedback');
 			this.$cmdPlay = this.$('.cmdPlay');
 			
-			this.player = this.options.player;
+			this.player = args.player;
+			this.$el.addClass((args.prefs.captions) ? 'captionsOn' : 'captionsOff');
 
-
-			// _.bindAll(this, 'renderMenu', 'renderConsole');
-
-			// could be this.options.player // peepcode
 			this.listenTo(this.player, 'change:currentIndex', this.changeSlide);
 			this.listenTo(this.player, 'change:state', this.updateState);
 
@@ -174,11 +171,6 @@
 			this.listenTo(this.collection, 'reset', this.renderConsole);
 			this.listenTo(this.collection, 'reset', this.renderSlides);
 			this.listenTo(this.collection, 'reset', this.updateState);
-			
-			// this.renderMenu();
-			// this.renderConsole();
-			// this.renderSlides();
-
 		},
 
 		renderMenu: function () {
@@ -303,6 +295,7 @@
 			}),
 
 			slideViewer = new SlideViewer({
+				prefs: {captions: true},
 				collection: projects,
 				player: player
 			});
