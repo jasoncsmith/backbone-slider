@@ -1,6 +1,6 @@
 /* SLIDER CSS */
 #slideshow { clear: right; width: 1000px; height: auto; margin: 0 auto 450px auto; padding: 0 0 0 25px; position: relative; z-index: 2; /* USER SELECT STOPS THE BLUE HIGHLIGHT COLOR ON CLICK */ /*width:31px; height:24px; position:absolute; top:16px; left:34px; cursor:pointer; background:url(../images/btns-sprite.png) no-repeat 0 0; z-index:120; text-indent:-9999px }*/ }
-#slideshow .container { position: relative; width: 601px; height: 436px; background: url(../images/bg_sliderBody.jpg) no-repeat 0 0; margin: 0; z-index: 2; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box; }
+#slideshow .container { position: relative; width: 601px; height: 436px; background-color:#333; margin: 0; z-index: 2; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box; }
 #slideshow .footer { position: relative; width: 100%; height: 55px; z-index: 3; }
 #slideshow .display { color: #FFFFFF; width: 297px; height: 170px; left: 620px; padding: 30px 40px; position: absolute; top: 10px; z-index: 5; background: url("../images/bg_sliderBody.jpg") no-repeat 100% 0; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box; -moz-box-shadow: -20px 28px 20px rgba(0, 0, 0, 0.8); -webkit-box-shadow: -20px 28px 20px rgba(0, 0, 0, 0.8); box-shadow: -20px 28px 20px rgba(0, 0, 0, 0.8); }
 #slideshow .project { margin: 10px 0; color: #ef5b00; }
@@ -19,10 +19,10 @@
 #slideshow .slide { float: left; }
 #slideshow img { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; }
 #slideshow .command { cursor: pointer; text-indent: -9999px; }
-#slideshow .navigation .command { width: 56px; height: 56px; cursor: pointer; text-indent: -9999px; }
+#slideshow .navigation .command { width: 56px; height: 56px; cursor: pointer; text-align:center; }
 #slideshow .cmdPrevious { float: left; background: url(../images/ui_slider_buttons_sprite.png) no-repeat 0 -224px; -ms-transition: margin 200ms ease-in-out; -o-transition: margin 200ms ease-in-out; -moz-transition: margin 200ms ease-in-out; -webkit-transition: margin 200ms ease-in-out; transition: margin 200ms ease-in-out; }
 #slideshow .cmdPrevious:hover { background-position: 0 -280px; margin-left: -2px; }
-#slideshow .cmdNext { float: right; background: url(../images/ui_slider_buttons_sprite.png) no-repeat -61px -224px; -ms-transition: margin 200ms ease-in-out; -o-transition: margin 200ms ease-in-out; -moz-transition: margin 200ms ease-in-out; -webkit-transition: margin 200ms ease-in-out; transition: margin 200ms ease-in-out; }
+#slideshow .cmdNext { float: right; background-color:blue; -ms-transition: margin 200ms ease-in-out; -o-transition: margin 200ms ease-in-out; -moz-transition: margin 200ms ease-in-out; -webkit-transition: margin 200ms ease-in-out; transition: margin 200ms ease-in-out; }
 #slideshow .cmdNext:hover { background-position: -61px -280px; margin-right: -2px; }
 #slideshow .navigation { width: 96%; height: 56px; position: absolute; top: -220px; left: 8px; z-index: 1; }
 #slideshow .cmdHelp { display: none; }
@@ -30,7 +30,7 @@
 #slideshow .cmdPlay:hover { color: #EABB00; }
 #slideshow .content { -webkit-border-radius: 9px; -moz-border-radius: 9px; border-radius: 9px; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box; height: 352px; margin: 3px 0 0 44px; overflow: hidden; padding: 0; position: relative; width: 500px; z-index: 2; background: url(../images/loader/loader-o-yellow.gif) no-repeat 50% 50%; }
 #slideshow .menu { margin: 13px 0 0 0; float: left; width: auto; height: 16px; background: url(../images/bg-thumbs-repeat.png) repeat-x 0 0; padding: 0 5px 0 33px; }
-#slideshow .menuItem { width: 8px; height: 8px; background: url(../images/ui_slider_buttons_sprite.png) no-repeat -74px -354px; float: left; padding: 6px; margin: 0 4px 0 0; cursor: pointer; text-indent: -9999px; position: relative; }
+#slideshow .menuItem { width: 8px; height: 8px; background-color:red; float: left; padding: 6px; margin: 0 4px 0 0; cursor: pointer; text-indent: -9999px; position: relative; }
 #slideshow .menuItem:hover { background-position: -74px -386px; }
 #slideshow .menuItem img { display: none; border: 2px solid #6C513E; position: absolute; top: 16px; left: 0; border-radius: 2px; }
 #slideshow .menuItem.selected { background-position: -74px -370px; cursor: default; }
