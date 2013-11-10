@@ -12,9 +12,9 @@
 		model: Project,
 		url: '../data/projects.json',
 		initialize: function () {
-			this.on('reset', function () { console.log('loaded projects.json'); })
+			this.on('reset', function () { console.log('loaded projects.json'); });
 		}
-   	});
+  });
 
 
 	// MODEL: controller
@@ -29,7 +29,7 @@
 			this.intervalId = null;
 			this.slideDeck = arguments[0].collection;
 			this.listenTo(this.slideDeck, 'reset', this.togglePlayback);
-			this.on('change:state', this.togglePlayback, this)
+			this.on('change:state', this.togglePlayback, this);
 		},
 
 		goTo: function (selectedIndex) {
@@ -99,7 +99,7 @@
 		initialize: function (args) {
 			this.player = args.player;
 			this.updateState();
-			this.listenTo(this.player, 'change:currentIndex', this.updateState)
+			this.listenTo(this.player, 'change:currentIndex', this.updateState);
 		},
 
 		render: function () {
@@ -115,7 +115,7 @@
 		showThumbnail: function () {
 			if (this.player.get('currentIndex') === (this.model.get('order') - 1)) return;
 			this.$el.append('<img src="' + this.model.get('image').url + '" width="200" height="144" />');
-			this.$('img').delay(300).fadeIn(200)
+			this.$('img').delay(300).fadeIn(200);
 		},
 
 		removeThumbnail: function () {
@@ -146,12 +146,12 @@
 		el: '#slideshow',
 
 		events: {
-			// 'click .menuItem': 			'goTo',
-			'click .cmdPrevious': 		'goBack',
-			'click .cmdNext': 			'goForward',
-			'click .cmdPlay': 			'play',
-			'click .cmdPause': 			'pause',
-			'click .cmdToggleCaptions': 'toggleCaptions'			
+			// 'click .menuItem': 'goTo',
+			'click .cmdPrevious': 'goBack',
+			'click .cmdNext': 'goForward',
+			'click .cmdPlay': 'play',
+			'click .cmdPause': 'pause',
+			'click .cmdToggleCaptions': 'toggleCaptions'
 		},
 
 		initialize: function (args) {
@@ -181,7 +181,7 @@
 				});
 
 				this.$menu.append(menuItem.render().el);
-			}, this)
+			}, this);
 		},
 
 		renderConsole: function () {
@@ -240,7 +240,7 @@
 			var msg = (isPlaying) ? 'playing...' : 'paused...';
 			
 			this.$feedback.html(msg);
-			this.$cmdPlay.toggle(!isPlaying)
+			this.$cmdPlay.toggle(!isPlaying);
 		},
 
 		changeSlide: function () {
@@ -254,7 +254,7 @@
 		logToConsole: function () {
 			console.log(this.player.get('currentIndex'), this.player.get('state'));
 		}
-	})
+	});
 
 	// VIEW
 	var ConsoleView = Backbone.View.extend({
@@ -304,9 +304,9 @@
 			collection: projects,
 			slideView: slideViewer,
 			playerModel: player
-		}
-	}
+		};
+	};
 
-	return {init: init}
+	return {init: init};
 	
 }($, Backbone, _)
